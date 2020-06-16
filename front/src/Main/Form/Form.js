@@ -8,22 +8,40 @@ class Form extends Component {
   }
 
   handleInputValue = (event) => {
-    console.log(event.target.value);
     this.setState({inputValue: event.target.value});
   }
 
-  sendData = (event) => {
+  sendData = async (event) => {
     event.preventDefault();
-    this.setState({inputValue: ''});
 
-    fetch('').then((response) => {
-      console.log(response);
+    if (this.state.inputValue === '') {
+      alert('Enter word or sentence in a text field');
+      return;
+    }
+
+    const sendData = JSON.stringify(this.state);
+
+    const data = await fetch('http://localhost:4200/main', {
+      method: 'POST',
+      body: sendData,
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
+
+    const result = await data.json();
+
+    this.setState({inputValue: ''});
+    console.log(result);
   }
 
-  // componentDidMount() {
-  //   console.log(this.state);
-  // }
+  showData = async () => {
+    // const data = await fetch('http://localhost:4200/show');
+    // const result = await data.json();
+
+    // console.log('all data:', result);
+    console.log('SHOW');
+  };
 
   render() {
     return (
@@ -35,7 +53,8 @@ class Form extends Component {
           onChange={this.handleInputValue}
           value={this.state.inputValue}
         />
-        <button className='form__button'>send data</button>
+        <button type='button' className='form__button' onClick={this.showData}>show all requests</button>
+        <button type='submit' className='form__button'>send data</button>
       </form>
     );
   }

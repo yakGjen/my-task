@@ -12,11 +12,17 @@
 
     border: none;
     box-shadow: $shadow;
+    outline: none;
   }
 
   &__button {
     border: none;
     box-shadow: $shadow;
     cursor: pointer;
+    outline: none;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 }

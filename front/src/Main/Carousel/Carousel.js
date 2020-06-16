@@ -19,7 +19,7 @@ const MyCarousel = () => (
     {imgs.map((item, i) => {
       return (
         <div key={i}>
-          <img src={item} />
+          <img src={item} alt={`img-${i}`} />
           <p className="legend">Picture {i + 1}</p>
         </div>
       );
