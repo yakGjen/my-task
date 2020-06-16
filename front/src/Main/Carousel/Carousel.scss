@@ -2,6 +2,9 @@
 
 .my-carousel {
   // width: 50%;
-  max-width: 300px;
+  // max-width: 300px;
+  max-width: 400px;
   margin: 0 auto $margin-items-in-main 0;
+
+  box-shadow: $shadow;
 }

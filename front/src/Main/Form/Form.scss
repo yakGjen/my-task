@@ -21,6 +21,7 @@
     box-shadow: $shadow;
     cursor: pointer;
     outline: none;
+    color: $primary;
 
     &:not(:last-child) {
       margin-bottom: 15px;

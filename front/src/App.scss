@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .App {
   max-width: 1366px;
   min-height: 100vh;
@@ -9,4 +11,5 @@
   justify-content: space-between;
 
   font-family: 'Lato', sans-serif;
+  color: $primary;
 }
