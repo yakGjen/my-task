@@ -1,0 +1,74 @@
+@import '../variables.scss';
+
+.header {
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+  position: relative;
+
+  box-shadow: $shadow;
+
+  
+
+  .nav {
+    display: flex;
+
+    // @media (max-width: $first-breackpoint) {
+    //   width: 100%;
+    //   flex-wrap: wrap;
+    // }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+
+      background: $background;
+
+      @media (max-width: $second-breackpoint) {
+        bottom: auto;
+        box-shadow: $shadow;
+      }
+    }
+
+    &__item {
+      margin: 0 20px;
+      transition: $animation;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      @media (max-width: $second-breackpoint) {
+        margin: 10px 40px;
+      }
+
+      @media (max-width: $third-breackpoint) {
+        margin: 10px 60px;
+      }
+    }
+
+    &__link {
+      color: $primary;
+      text-decoration: none;
+    }
+
+    &__badge {
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+}
