@@ -1,9 +1,7 @@
+@import '../../variables.scss';
+
 .my-carousel {
   // width: 50%;
   max-width: 300px;
-  margin: 0 auto;
-}
-
-.thumb {
-  width: 30px !important;
+  margin: 0 auto $margin-items-in-main 0;
 }

@@ -24,18 +24,6 @@ const MyCarousel = () => (
         </div>
       );
     })}
-      {/* <div>
-          <img src={img1} />
-          <p className="legend">Legend 1</p>
-      </div>
-      <div>
-          <img src="../../assets/img_1.png" />
-          <p className="legend">Legend 2</p>
-      </div>
-      <div>
-          <img src="../../assets/img_1.png" />
-          <p className="legend">Legend 3</p>
-      </div> */}
   </Carousel>
 );
 
