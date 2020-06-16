@@ -36,11 +36,10 @@ class Form extends Component {
   }
 
   showData = async () => {
-    // const data = await fetch('http://localhost:4200/show');
-    // const result = await data.json();
+    const data = await fetch('http://localhost:4200/main');
+    const result = await data.json();
 
-    // console.log('all data:', result);
-    console.log('SHOW');
+    console.log('all data:', result);
   };
 
   render() {
