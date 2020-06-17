@@ -34,13 +34,12 @@
       z-index: -1;
       opacity: 0;
       
+      box-shadow: $shadow;
       transition: $animation;
-
       background: $background;
 
       @media (max-width: $second-breackpoint) {
         bottom: auto;
-        box-shadow: $shadow;
       }
 
       &_show {
