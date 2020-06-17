@@ -1,5 +1,12 @@
 @import '../../variables.scss';
 
+.form-header {
+  margin-bottom: 15px;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+}
+
 .form {
   width: 100%;
   margin-bottom: $margin-items-in-main;

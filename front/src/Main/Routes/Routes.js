@@ -19,7 +19,7 @@ const thirdRoute = async () => {
 const Routes = () => {
   return (
     <section className='routes'>
-      <h2 className='routes__header'>other routes</h2>
+      <h2 className='routes__header'>Other routes</h2>
       <button className='routes__button' onClick={secondRoute}>second route</button>
       <button className='routes__button' onClick={thirdRoute}>third route</button>
     </section>

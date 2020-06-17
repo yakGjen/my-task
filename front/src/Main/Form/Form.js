@@ -35,20 +35,23 @@ const showData = async () => {
 const Form = () => {
   const [inputValue, setInputValue] = useState('');
   return (
-    <form className='form' onSubmit={(e) => {
-      setInputValue('');
-      return sendData(inputValue, e);
-    }}>
-      <input 
-        type='name' 
-        placeholder='Enter your request'
-        className='form__input'
-        onChange={(e) => setInputValue(e.target.value)}
-        value={inputValue}
-      />
-      <button type='button' className='form__button' onClick={showData}>show all requests</button>
-      <button type='submit' className='form__button'>send data</button>
-    </form>
+    <section>
+      <h2 className='form-header'>Simple form</h2>
+      <form className='form' onSubmit={(e) => {
+        setInputValue('');
+        return sendData(inputValue, e);
+      }}>
+        <input 
+          type='name' 
+          placeholder='Enter your request'
+          className='form__input'
+          onChange={(e) => setInputValue(e.target.value)}
+          value={inputValue}
+        />
+        <button type='button' className='form__button' onClick={showData}>show all requests</button>
+        <button type='submit' className='form__button'>send data</button>
+      </form>
+    </section>
   );
 };
 
