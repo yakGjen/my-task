@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .App {
-  max-width: 1366px;
+  max-width: $max-width;
   min-height: 100vh;
   margin: 0 auto;
 
